@@ -1,7 +1,7 @@
 package com.example.web.soapclient;
 
-import com.example.web.autogen.consumingwebservice.wsdl.SaveMessageRequest;
-import com.example.web.autogen.consumingwebservice.wsdl.SaveMessageResponse;
+import com.example.web.autogen.wsdl.messageservice.SaveMessageRequest;
+import com.example.web.autogen.wsdl.messageservice.SaveMessageResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 

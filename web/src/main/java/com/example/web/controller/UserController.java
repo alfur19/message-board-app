@@ -1,8 +1,8 @@
 package com.example.web.controller;
 
 import com.example.common.MessageList;
-import com.example.web.autogen.consumingwebservice.wsdl.Message;
-import com.example.web.autogen.consumingwebservice.wsdl.SaveMessageRequest;
+import com.example.web.autogen.wsdl.messageservice.Message;
+import com.example.web.autogen.wsdl.messageservice.SaveMessageRequest;
 import com.example.web.component.UserSessionBean;
 import com.example.web.controller.form.MessageForm;
 import com.example.web.soapclient.MessageServiceClient;

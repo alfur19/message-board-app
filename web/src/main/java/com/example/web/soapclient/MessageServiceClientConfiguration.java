@@ -14,7 +14,7 @@ public class MessageServiceClientConfiguration {
     @Bean
     public Jaxb2Marshaller marshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-        marshaller.setContextPath("com.example.web.autogen.consumingwebservice.wsdl");
+        marshaller.setContextPath("com.example.web.autogen.wsdl.messageservice");
         return marshaller;
     }
 
