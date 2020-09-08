@@ -1,7 +1,7 @@
 package com.example.backend.service;
 
-import io.spring.guides.gs_producing_web_service.SaveMessageRequest;
-import io.spring.guides.gs_producing_web_service.SaveMessageResponse;
+import com.example.backend.service.impl.soap.autogen.SaveMessageRequest;
+import com.example.backend.service.impl.soap.autogen.SaveMessageResponse;
 
 public interface SaveMessageService {
     SaveMessageResponse saveMessage(SaveMessageRequest request);

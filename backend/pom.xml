@@ -108,6 +108,7 @@ In Java SE 11, the module java.se.ee has been removed. To use JAX-WS and JAXB yo
 					<sources>
 						<source>${project.basedir}/src/main/resources/messages.xsd</source>
 					</sources>
+					<packageName>com.example.backend.service.impl.soap.autogen</packageName>
 				</configuration>
 			</plugin>
 		</plugins>
