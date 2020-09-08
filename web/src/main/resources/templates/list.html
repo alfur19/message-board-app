@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Spring Security Example </title>
+    <div th:replace="fragments/header :: header-css"/>
+</head>
+<body>
+<div th:replace="fragments/header :: header"/>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+        <th scope="col">Sender</th>
+        <div th:if="${isMinimalView == null}">
+            <th scope="col">URL</th>
+        </div>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="model : ${messageList.getMessages()}">
+        <td th:text="${model.title}" />
+        <td th:text="${model.content}" />
+        <td th:text="${model.sender}" />
+        <div th:if="${model.url != null}">
+            <td><a th:href="${model.url}" th:text="${model.url}" target="_blank" ></a></td>
+        </div>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>

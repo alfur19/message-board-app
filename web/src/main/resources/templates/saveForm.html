@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Security Example </title>
+    <div th:replace="fragments/header :: header-css"/>
+</head>
+<body>
+<div th:replace="fragments/header :: header"/>
+
+<div class="container">
+<div class="row" style="margin-top:20px">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+        <form action="#" th:action="@{/save}" th:object="${messageForm}" method="post">
+            <fieldset>
+                <h1>Post Message Here</h1>
+
+                <div class="form-group">
+                    <input type="text" name="title" th:field="*{title}" class="form-control input-lg"
+                           placeholder="Title" required="true" autofocus="true"/>
+                    <div class="alert alert-danger" th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Title Error</div>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="content" th:field="*{content}" class="form-control input-lg"
+                           placeholder="Content (optional)"/>
+                    <div class="alert alert-danger" th:if="${#fields.hasErrors('content')}" th:errors="*{content}">Content Error</div>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="sender" th:field="*{sender}" class="form-control input-lg"
+                           placeholder="Sender" required="true"/>
+                    <div class="alert alert-danger" th:if="${#fields.hasErrors('sender')}" th:errors="*{sender}">Sender Error</div>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="url" th:field="*{url}" class="form-control input-lg"
+                           placeholder="URL" required="true"/>
+                    <div class="alert alert-danger" th:if="${#fields.hasErrors('url')}" th:errors="*{url}">URL Error</div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <input type="submit" class="btn btn-lg btn-primary btn-block" value="Save"/>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

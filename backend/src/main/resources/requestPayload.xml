@@ -1,0 +1,8 @@
+<gs:saveMessageRequest xmlns:gs="http://spring.io/guides/gs-producing-web-service">
+    <gs:message>
+        <gs:title>Test Title</gs:title>
+        <gs:content>Sample Content</gs:content>
+        <gs:sender>TestClass</gs:sender>
+        <gs:url>https://www.google.com/</gs:url>
+    </gs:message>
+</gs:saveMessageRequest>

@@ -1,0 +1,45 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <div th:fragment="header-css">
+        <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    </div>
+</head>
+<body>
+<div th:fragment="header">
+    <!-- this is header -->
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" th:href="@{/}">Demo Application - Hello
+                    [[${#httpServletRequest.remoteUser}]]! </a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <div th:if="${#httpServletRequest.remoteUser != null}">
+                    <ul class="nav navbar-nav" sec:authorize="isAuthenticated()">
+                        <li class="active"><a th:href="@{/minimal}">List (REST/JSON Minimal)</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav" sec:authorize="isAuthenticated()">
+                        <li class="active"><a th:href="@{/listJson}">List (REST/JSON Full)</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav" sec:authorize="isAuthenticated()">
+                        <li class="active"><a th:href="@{/listXml}">List (REST/XML Full)</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav" sec:authorize="isAuthenticated()">
+                        <li class="active"><a th:href="@{/saveForm}">Save Message (SOAP)</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <li class="active"><a href="javascript: document.logoutForm.submit()"> Logout</a></li>
+                            <form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
+                                <input hidden type="submit" value="Sign Out"/>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+</body>
+</html>

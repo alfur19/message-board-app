@@ -1,0 +1,3 @@
+<ns2:saveMessageResponse xmlns:ns2="http://spring.io/guides/gs-producing-web-service">
+    <ns2:saved>true</ns2:saved>
+</ns2:saveMessageResponse>
