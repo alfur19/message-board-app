@@ -7,7 +7,7 @@ This is a simple message board application.
 
 Build & Deployment
 ------------------------
-- Clone the repository
+- Clone the repository / Download ZIP
 - Change directory to your local working copy (e.g., C:\repo\message-board-app\)
 - Run the following commands:
 ```
