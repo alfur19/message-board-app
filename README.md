@@ -1,6 +1,11 @@
 # message-board-app
 
-Execution Procedure
+Short description
+-------------------------------
+This is a simple message board application.
+
+
+Build & Deployment
 ------------------------
 - Clone the repository
 - Change directory to your local working copy (e.g., C:\repo\message-board-app\)
@@ -15,11 +20,11 @@ By default, the backend module will be deployed on 8080 and the web module on 90
 
 ```
 \backend\src\main\resources\application.properties
-server.port=8080
+- server.port=8080
 
 \web\src\main\resources\application.properties
-$ server.port=9090
-$ webservice.address=http://localhost:8080
+- server.port=9090
+- webservice.address=http://localhost:8080
 ```
 
 Enter: http://localhost:9090
