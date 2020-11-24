@@ -2,7 +2,7 @@
 
 Short description
 -------------------------------
-This is a simple message board application. See "message-board-app-requirements.pdf" for full description of the user requirements.
+This is a simple message board application. See the "message-board-app-requirements.pdf" for full description of the user requirements.
 
 
 Build & Deployment
